@@ -1,10 +1,10 @@
-## Data Dog Coding Assignment
+# Data Dog Coding Assignment
 
-# Step One - Setting Up The Environment
+## Step One - Setting Up The Environment
 
 First I signed up for Datadog, and then used the integration tool to install and set up the Agent on my Mac OSX. 
 
-# Step Two - Collecting Metrics
+## Step Two - Collecting Metrics
 
 For the first metric I had to go into the datadog.yaml file and uncomment the tags in order to set up a custom tag for my server.
 
@@ -44,9 +44,9 @@ The next metric that we want to display is our custom metric that will periodica
 
   This is our yaml file which specifies we want to run our check every 45 seconds.
 
-  # Step Three - Visualizing Our Metric
+  ## Step Three - Visualizing Our Metric
 
-  Now we want to visualize our custom my_metric check. To do this we'll use the Datadog API to create timeboards. I've included the script inside the `api_call.rb` file. It creates three timeboards.
+  Now we want to visualize our custom my_metric check. To do this we'll use the Datadog API to create timeboards. I've included the script inside the `api_call.rb` file. It creates three timeboards. I used the API documentation to figure out what my graph hashes should look like, and also used the dotenv gem to store the API and app keys in an `.env` file in order to not expose my keys when I upload this to github.
 
 ![my_metric timeboards](/timeboards.png "The three timeboards that were created")
 
@@ -63,5 +63,5 @@ In order to take a snapshot we click on the camera icon above one of our boards 
 
 ![5 minute snapshot](/five_minute_snapshot.png)
 
-# Step Four - Creating A Monitor For Our Metric
+## Step Four - Creating A Monitor For Our Metric
 
